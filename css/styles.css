@@ -1,0 +1,95 @@
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.start-screen, .hidden, #result-screen {
+  border: 1px solid #feb47b;
+  padding: 20px;
+  color: black;
+  border-radius: 20px;
+  background: wheat;
+  margin: 40px auto; /* center horizontally */
+  max-width: 90%; /* responsive width */
+  width: 400px; /* max width for large screens */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.start-screen h1,
+.hidden h1,
+#result-screen h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.start-screen select,
+.start-screen button,
+.hidden button,
+#result-screen button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.start-screen button,
+#result-screen button {
+  color: white;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+
+.hidden div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#result-screen {
+  align-items: center;
+  justify-content: center;
+}
+
+#leaderboard-section {
+  display: none; /* hide until there are scores */
+  border: 1px solid #feb47b;
+  padding: 20px;
+  color: black;
+  border-radius: 20px;
+  background: wheat;
+  margin: 40px auto; /* center horizontally */
+  max-width: 90%; /* responsive width */
+  width: 400px; 
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 500px) {
+  .start-screen, .hidden, #result-screen {
+    width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .start-screen button,
+  .hidden button,
+  #result-screen button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .start-screen h1,
+  .hidden h1,
+  #result-screen h1 {
+    font-size: 1.2rem;
+  }
+}
