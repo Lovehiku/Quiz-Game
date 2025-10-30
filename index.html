@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/data.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/storage.js" defer></script>
+    <script src="./js/leader.js" defer></script>
+
+</head>
+<body>
+    <section class="start-screen">
+        <h1>QUIZ APP</h1>
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <label for="num-questions">Number of Questions:</label>
+        <select id="num-questions">
+           <option value="5">5</option>
+           <option value="10">10</option>
+           <option value="15">15</option>
+        </select>
+        <label for="category">Select Category:</label>
+<select id="category">
+  <option value="any">Any Category</option>
+  <option value="science">Science</option>
+  <option value="history">History</option>
+  <option value="geography">Geography</option>
+  <option value="math">Math</option>
+</select>
+        <button id="btn">START</button>
+    </section>
+    <section id="quiz-screen" class="hidden">
+      <h1 id="question"></h1>
+      <div id="options"></div>
+      <p id="progress"></p>
+    </section>
+    <section id="result-screen" style="display: none;">
+      <h1>Quiz Completed!</h1>
+      <p id="final-score"></p>
+      <p id="percentage"></p>
+      <label for="player-name">Enter your name:</label>
+      <input type="text" id="player-name" placeholder="Your name">
+      <button id="save-score">Save Score</button>
+      <button id="restart-btn">Restart Quiz</button>
+    </section>
+    <section id="leaderboard-section">
+     <h2>🏆 Top 5 Scorers</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody id="leaderboard"></tbody>
+</table>
+</section>
+</body>
+</html>
